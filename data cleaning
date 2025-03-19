@@ -1,0 +1,101 @@
+Link: https://docs.google.com/spreadsheets/d/1HbeXjWo84bz2gmB7o0V-X4g2DYRexnvKXCTpbZDZLAE/edit?usp=sharing
+Cleaning data in 10 steps 
+
+Data cleaning in 10 steps:
+
+- [ ] Dataset - YouTube  
+
+Step 1: Adjust the row and column height
+
+To-do: 
+
+Excel - Format > Cell Size > Auto adjust height of row and column 
+
+Shortcut : Alt + H +O + A - Rows, Alt + H +O + I - Columns 
+
+Google Sheets - Select the data > Right Click > Fit to data
+
+Step 2: Find and Replace
+
+To-do:
+
+Excel - Select the column > Find and Replace (Ctrl + H) > Select the (*) - all the data and replace with nothing 
+
+Google Sheets - Select the column > Format the column as Plain Text from number 
+
+Edit > Find and Replace (Ctrl +Shift + H) > Use the expression \(.*?\)
+
+
+Breaking It Down
+* \( → Matches a literal opening parenthesis (. The backslash \ is needed because parentheses are special characters in regex, so we need to escape them.
+* .*? → Matches any characters (.) zero or more times (*), but in a lazy (non-greedy) way (?).
+    * .* alone is greedy, meaning it would match everything between the first ( and the last ).
+    * Adding ? makes it lazy, so it stops at the first closing parenthesis ).
+* \) → Matches a literal closing parenthesis ), again using \ to escape it.
+
+
+Step 3: 
+
+Convert the Upper case to lower case
+
+To-do: Both Excel and sheets 
+
+= lower(cell value) > Copy and paste the cells as values (if you delete the main source, the values remain intact after the formula)
+
+Step 4:
+
+To format the data without spacing or format the data without with upper and lower case inconsistencies, use trim and proper
+
+To-do: Both Excel and sheets 
+Proper(cell value) -  helps to have Captial letters after spaces
+Trim(cell value) - trims the excess space in the cell 
+
+Copy and paste the cells as values (if you delete the main source, the values remain intact after the formula)
+
+Step 5:
+
+Split text to columns 
+
+To-do:
+Select the text/ column > Data > Split the data text to columns > Select the separator (it could be custom or similar like a comma, full stop or a semi-colon)
+
+Step 6:
+
+Check for duplicate values and remove them
+
+To-do: 
+
+Excel: Select the entire table > Go to Data > Remove duplicates
+
+Sheets: Select the entire table > Go to data > Data cleanup > Remove duplicates
+
+Step 7:
+
+Filling the blank cells
+
+To-do:
+
+Excel : Select the table > Home > Find and Select > Special > Blanks > N/A > Ctrl + Enter
+
+Google Sheets: Select the table > create a filter > Click on the filter and select the blank values > NA > replace the values manually 
+
+Step 8:
+
+Setting the forumlas by IFERROR
+
+IFERROR(FORMULA,”NA”)
+
+Step 9
+
+ Formatting the header row
+
+Ctrl+Shift + -> - To select the header row
+
+Ctrl+ B- For Bold
+
+Step 10
+
+Get rid of the gridlines
+
+Sheets and Excel: Select the table > View > Remove Gridlines 
+
